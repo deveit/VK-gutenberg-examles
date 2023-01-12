@@ -1,0 +1,107 @@
+.brands {
+	padding: 4rem 0 1.5rem 0 ;
+	position: relative;
+
+	@include rwd('large-phone', true) {
+		padding: 6rem 0 2.5rem 0;
+	}
+
+	@include rwd('large-tablet', true) {
+		padding: 8.4rem 0 0.5rem;
+	}
+
+	&__bg {
+		overflow: hidden;
+
+		&--center {
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			left: 50%;
+			transform: translate3D(-50%, -44%, 0);
+
+			width: 37.5rem;
+			height: 37.5rem;
+			background: radial-gradient(circle, rgba(47, 172, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+			@include rwd('large-phone', true) {
+				left: 50%;
+				width: 48rem;
+				height: 48rem;
+				transform: translate3D(-80%, -10%, 0);
+			}
+		}
+
+		&:after,
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			width: 37.5rem;
+			height: 37.5rem;
+			left: calc(50% - 187px);
+
+			@include rwd('large-phone', true) {
+				width: 48rem;
+				height: 48rem;
+				left: calc(50% - 390px);
+			}
+
+		}
+
+		&:after {
+			transform: translate3D(-60%, -22%, 0);
+			background: radial-gradient(circle, rgba(127, 43, 223, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+			@include rwd('large-tablet', true) {
+				transform: translate3D(-60%, 0, 0);
+			}
+		}
+
+		&:before {
+			transform: translate3D(60%, 0, 0);
+			background: radial-gradient(circle, rgba(108, 207, 250, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+		@include rwd('large-tablet', true) {
+			transform: translate3D(62%, -10%, 0);
+		}
+		}
+	}
+
+	&__text {
+		margin: 0 0 2.5rem 0;
+		@include rwd('tablet', true) {
+			margin: 0 0 3.5rem 0;
+		}
+	}
+	&__logos {
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+
+		@include rwd('tablet', true) {
+
+		}
+		@include rwd('large-tablet', true) {
+
+		}
+		&-image {
+			width: 9.7rem ;
+			height: 5.5rem ;
+			object-fit: contain;
+
+			@include rwd('tablet', true) {
+				height: 6rem;
+			}
+
+			@include rwd('large-tablet', true) {
+				width: 14.3rem ;
+				height: 11rem ;
+				margin-bottom: 2.5rem ;
+			}
+
+		}
+	}
+}

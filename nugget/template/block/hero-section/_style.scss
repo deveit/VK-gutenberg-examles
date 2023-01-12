@@ -1,0 +1,115 @@
+.hero-section {
+	// height: 100vh; 
+	// height: calc(var(--vh, 1vh) * 100);
+	// max-height: calc(var(--vh, 1vh) * 100);
+	display: flex ;
+	transition: height .4s ease ;
+	.section-decore {
+		position: absolute;
+		pointer-events: none;
+		z-index: 4 ;
+		@include media-min(768px) {
+			&.decore-1 {
+				width: 100px;
+				height: 100px;
+				bottom: 23px;
+				right: 16px;
+				transform: rotate(-30deg);
+				background: url('../template/block/hero-section/img/ketchup.png') no-repeat 0 0 / 100% auto ;
+				width: 283px;
+				height: 283px;
+				bottom: 32px;
+				right: 0;
+			}
+		}
+		&.decore-2 {
+			width: 150px;
+			height: 190px;
+			top: 5px;
+			left: -14px;
+			background: url('../template/block/hero-section/img/saucen.png') no-repeat 0 0 / 100% auto ;
+			@include media-min(768px) {
+				width: 462px;
+				height: 505px;
+				top: 0;
+				left: 0px;
+			}
+		}
+	}
+	.light-frame {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		// padding: 32px 16px 16px 16px;
+		// @include media-min(768px) {
+		// 	padding: 42px 32px 32px 32px;
+		// }
+		.row {
+			width: 100%;
+			max-width: 100% ;
+			padding: 0 16px ;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@include media-min(768px) {
+				padding: 0 0;
+			}
+		}
+	}
+	.video-container {
+		display: flex ;
+		width: 100% ;
+		margin: 0 auto 0 ;
+		pointer-events: none ;
+		@include media-min(768px) {
+			// background: #fff ;
+			// max-width: 1068px ;
+			width: 100% ;
+		}
+	}
+	.hero-video {
+		mix-blend-mode: darken;
+		vertical-align: top;
+		width: 100%;
+		max-width: 100% ;
+		// height: auto;
+		// max-height: 60vh;
+		max-height: 80vh;
+		@include media-min(768px) {
+			width: 100%;
+			max-height: none ;
+			min-height: 150px ;
+			max-width: 1070px ;
+			margin: 0 auto 0 ;
+		}
+	}
+	.hero-heading-row {
+		// position: absolute;
+		// bottom: 0;
+		// left: 16px ;
+		// @include media-max(767px) {
+		// }
+		.custom-heading  {
+			margin: 0 0 0 0 ;
+			// @include media-max(767px) {
+			// 	box-decoration-break: clone;
+			// 	-webkit-box-decoration-break: clone;
+			// 	background: rgba($white, .4);
+			// 	display: inline;
+			// 	line-height: normal ;
+			// 	padding: 0 16px ;
+			// }
+			@include media-min(768px) {
+				// margin: -45px 0 0 0 ;
+			}
+			@include media-min(992px) {
+				// margin: -105px 0 0 0 ;
+			}
+		}
+	}
+	.light-frame {
+		@include media-min(768px) {
+			padding: 42px 32px 32px 32px ;
+		}
+	}
+}

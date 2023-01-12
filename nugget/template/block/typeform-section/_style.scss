@@ -1,0 +1,8 @@
+.text-section {
+	@include media-min(768px) {
+		.text-section-text {
+			max-width: 645px ;
+			margin: 0 auto 0 ;
+		}
+	}
+}

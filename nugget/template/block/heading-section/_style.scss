@@ -1,0 +1,10 @@
+.heading-section {
+	.custom-heading {
+		display: block;
+		@include media-max(767px) {
+			br {
+				display: none;
+			}
+		}
+	}
+}

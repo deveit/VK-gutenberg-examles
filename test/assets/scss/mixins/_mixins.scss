@@ -1,0 +1,19 @@
+//use @extend %bgcover; to selector if you need background cover;
+@mixin bgcover {
+	background-size:cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+//use @extend %bgcontain; to selector if you need contain image in block;
+@mixin bgcontain {
+	background-size:contain ;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+@mixin lu {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}

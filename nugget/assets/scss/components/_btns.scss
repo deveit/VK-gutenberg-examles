@@ -1,0 +1,88 @@
+
+.custom-button, .button,#BorlabsCookieBox ._brlbs-accept ._brlbs-btn,#BorlabsCookieBox .cookie-preference ._brlbs-btn, input[type='submit'], input[type='reset'] {
+	display: inline-flex;
+	font-family: $font ;
+	color: $white;
+	@include transition ;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 125%;
+	text-align: center;
+	justify-content: center;
+	cursor: pointer ;
+	padding: 10px 14px ;
+	border: 2px solid $white;
+	text-decoration: none;
+	border-radius: 15px ;
+	margin: 0 4px 16px 4px ;
+	position: relative;
+	min-width: 96px ;
+	mix-blend-mode: multiply;
+	background: transparent ;
+	font-style: normal;
+	text-rendering: optimizeLegibility; 
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@include media-min(768px) {
+		padding: 14px 30px;
+		font-size: 16px;
+		line-height: 120%;
+		margin: 0 8px 16px 0 ;
+
+	}
+	&:hover, &:focus {
+		background: $white  ;
+		color: $black ;
+	}
+	&.active {
+		background: $white  ;
+		color: $black ;
+	}
+	&.dark {
+		background: $light-orange;
+		color: $black ;
+		border: 2px solid $black ;
+		@include media-min(768px) {
+			background: transparent ;
+		}
+		&:hover {
+			background: $orange;
+			color: $main_color ;
+		}
+	}
+	svg {
+		transition:all .3s ease-in-out;
+	}
+}
+
+#BorlabsCookieBox .cookie-box ._brlbs-accept ._brlbs-btn,
+#BorlabsCookieBox .cookie-preference ._brlbs-btn {
+	background: transparent !important;
+	color: $black ;
+	border: 2px solid $black ;
+	min-width: 100px ;
+	padding: 10px 10px ;
+	width: auto;
+	margin: 0 4px 4px 4px ;
+	@include media-min(768px) {
+		margin: 0 8px 8px 8px ;
+		min-width: 160px ;
+		padding: 14px 14px ;
+	}
+	&:hover {
+		border-radius: 15px ;
+		background: $orange !important;
+		color: $main_color ;
+		box-shadow: none;
+	}
+}
+
+// .fancybox-button {
+// 	min-width: auto ;
+// 	&:hover {
+// 		svg {
+// 			fill: $white ;
+// 			color: $white ;
+// 		}
+// 	}
+// }

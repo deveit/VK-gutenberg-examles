@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?o73hyh');
+  src:  url('fonts/icomoon.eot?o73hyh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?o73hyh') format('truetype'),
+    url('fonts/icomoon.woff?o73hyh') format('woff'),
+    url('fonts/icomoon.svg?o73hyh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e917";
+}
+.icon-arrow-left:before {
+  content: "\e918";
+}
+.icon-arrow-up:before {
+  content: "\e911";
+}
+.icon-arrow-down:before {
+  content: "\e912";
+}
+.icon-mute:before {
+  content: "\e913";
+}
+.icon-unmute:before {
+  content: "\e914";
+}
+.icon-play:before {
+  content: "\e900";
+}
+.icon-ico-search:before {
+  content: "\e910";
+}
+.icon-ico-pdf:before {
+  content: "\e90f";
+}
+.icon-pacifier:before {
+  content: "\e901";
+}
+.icon-drop:before {
+  content: "\e902";
+}
+.icon-tennis-ball:before {
+  content: "\e903";
+}
+.icon-teddy-bear:before {
+  content: "\e904";
+}
+.icon-ico-facebook:before {
+  content: "\e905";
+}
+.icon-ico-instagram:before {
+  content: "\e906";
+}
+.icon-ico-lokalizacja-autobus:before {
+  content: "\e907";
+}
+.icon-ico-lokalizacja-bank:before {
+  content: "\e908";
+}
+.icon-ico-lokalizacja-lotnisko:before {
+  content: "\e909";
+}
+.icon-ico-lokalizacja-poznan:before {
+  content: "\e90a";
+}
+.icon-ico-lokalizacja-sklep:before {
+  content: "\e90b";
+}
+.icon-ico-lokalizacja-szkola:before {
+  content: "\e90c";
+}
+.icon-ico-lokalizacja-szpital:before {
+  content: "\e90d";
+}
+.icon-ico-youtube:before {
+  content: "\e90e";
+}

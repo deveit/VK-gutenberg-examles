@@ -1,0 +1,50 @@
+{
+    "key": "group_60e55cc00ff84",
+    "title": "ACF-Blocks: All blocks frame",
+    "fields": [
+        {
+            "key": "field_60e55cd2932ff",
+            "label": "Select frame",
+            "name": "select_frame",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "Main orange frame",
+                "green": "Main green frame",
+                "red": "Main red frame"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1627299164
+}

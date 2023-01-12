@@ -1,0 +1,119 @@
+/* ---
+  Sizes:
+    • button--small
+
+  Styles:
+    • button--border
+    • button--fill
+
+  Colors:
+    • button--green
+    • button--orange
+--- */
+
+.btn {
+  display: inline-flex;
+  font-weight: $fw-Medium;
+  font-size: 1.6rem;
+  line-height: 120%;
+  height: 5rem;
+
+  &__dark {
+    color: $c-white;
+
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+
+    background: $c-main-dark;
+    border-radius: 6rem;
+    padding: 0 3.2rem;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.04);
+    transition: background-color $tr ease-in-out;
+
+    &:hover {
+      color: $c-main-dark;
+      background: $c-white;
+    }
+  }
+
+  &__accent {
+    color: $c-white;
+
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+
+    background: $c-accent;
+    border-radius: 6rem;
+    padding: 0 3.2rem;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.04);
+    transition: background-color $tr ease-in-out;
+
+    &--h100 {
+      height: 100%;
+    }
+
+    &:hover {
+      color: $c-main-dark;
+      background: $c-accent-2;
+    }
+  }
+
+  &__light {
+    color: $c-main-dark;
+
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+
+    background: $c-white;
+    border-radius: 6rem;
+    padding: 1.4rem 3.2rem;
+    box-shadow: 0.2rem 0.2rem 1.4rem rgba(0, 0, 0, 0.04);
+    transition: background-color $tr ease-in-out;
+
+    &:hover {
+      color: $c-white;
+      background: $c-main-dark;
+    }
+  }
+
+  &__link,
+  &__link_arrow {
+    font-size: 1.8rem;
+    height: auto;
+    line-height: 132%;
+    color: $c-main-dark;
+
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $c-accent;
+
+      &:after {
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="9" height="13" viewBox="0 0 9 13" fill="none"%3E%3Cpath d="M2 13C1.71875 13 1.46875 12.9062 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.5 12.9062 2.25 13 2 13Z" fill="%233585F4"/%3E%3C/svg%3E');
+      }
+    }
+  }
+
+  &__link_arrow {
+    position: relative;
+    padding: 0 1.9rem 0 0;
+
+    &:after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='13' viewBox='0 0 9 13' fill='none'%3E%3Cpath d='M2 13C1.71875 13 1.46875 12.9062 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.5 12.9062 2.25 13 2 13Z' fill='%23262948'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right center;
+      position: absolute;
+      right: 0;
+      width: 0.8rem;
+      height: 2.4rem;
+    }
+  }
+}

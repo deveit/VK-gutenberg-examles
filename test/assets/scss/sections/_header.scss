@@ -1,0 +1,21 @@
+.header {
+	background: var(--white) ;
+	padding: 10px 0;
+	
+	@include media-min($md) {
+		padding: 23px 0;
+	}
+
+	&__logo {
+		width: 100px;
+		height: auto;
+		max-height: 24px;
+		object-fit: cover;
+
+		@include media-min($md) {
+			width: 160px;
+			max-height: 38px;
+		}
+	}
+}
+

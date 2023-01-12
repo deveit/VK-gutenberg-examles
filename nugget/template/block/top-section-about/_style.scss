@@ -1,0 +1,74 @@
+.top-section-about {
+	
+	.row {
+		mix-blend-mode: multiply;
+	}
+	.top-section-about-name {
+		position: absolute;
+		display: inline-block;
+		top: 95px;
+		left: 0;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 100%;
+		letter-spacing: -1.5px;
+		color: $main_color ;
+		padding: 12px 22px ;
+		background: url('../template/block/top-section-about/img/name-bg.jpg') no-repeat center / cover ;
+		filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+		transform: rotate(-6.12deg);
+		@include media-min(768px) {
+			padding: 18px 36px ;
+			top: 210px;
+			left: 40px;
+			font-size: 64px;
+			line-height: 85%;
+			letter-spacing: -2.18px;
+		}
+	}
+	.light-frame {
+		@include media-min(768px) {
+			&:after {
+				content: '' ;
+				position: absolute;
+				z-index: 2 ;
+				top: 120px;
+				right: 60px ;
+				width: 192px;
+				height: 151px;
+				pointer-events: none ;
+				background: url('../template/block/top-section-about/img/nugget.png') no-repeat center / contain ;
+			}
+		}
+
+	}
+	.transform-rotate--1 {
+		position: relative;
+		z-index: 2;
+	}
+	.custom-heading {
+		margin: -50px 0 0 0 ;
+		@include media-min(768px) {
+			margin: -95px 0 0 0 ;
+		}
+		br {
+			display: block;
+		}
+	}
+
+	picture {
+		display: block;
+		// max-width: 1070px ;
+		margin: 0 auto 0 ;
+		width: 100%;
+		transform: rotate(-3deg);
+		@include media-min(768px) {
+			transform: rotate(-1.5deg);
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain ;
+		}
+	}
+}

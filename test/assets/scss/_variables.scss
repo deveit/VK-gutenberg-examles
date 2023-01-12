@@ -1,0 +1,35 @@
+
+$browser-context: 16; // Default
+
+//declare variables below
+
+$font: 'Rubik', sans-serif;
+
+// Rubik
+// 300 
+// 400 
+// 500
+// 600
+// 700
+// 800
+// 900
+
+body {
+	--white: #ffffff ;
+	--black: #000000 ;
+	--main: #215398 ;
+	--light-blue: #F1F6FC ;
+	--black-text: #2D3236 ;
+	--gray-text: #808080 ;
+	--magenta: #FF3859 ;
+	--heading-parent: var(--black-text) ;
+	--text-parent: var(--gray-text) ;
+}
+
+
+// Breakpoints
+$sm: 576px ;
+$md: 768px ;
+$lg: 992px ;
+$xl: 1200px ;
+$xxl: 1400px ;

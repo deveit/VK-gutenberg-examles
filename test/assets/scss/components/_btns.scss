@@ -1,0 +1,58 @@
+.custom-button, button, .button, input[type='submit'], input[type='reset'] {
+	display: inline-flex;
+	font-family: $font ;
+	color: var(--main);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	transition: all .3s ease-in-out;
+	background: transparent ;
+	text-decoration: none;
+	border-radius: 0;
+	border: 2px solid var(--main);
+	text-align: center;
+	justify-content: center;
+	padding: 6px 25px ;
+	margin: 0 5px 10px 0 ;
+	@include media-min($md) {
+		font-size: 16px;
+		line-height: 22px;
+		padding: 6px 40px;
+		min-width: 165px ;
+		margin: 0 11px 15px 0 ;
+	}
+	&:hover, &:focus {
+		background: var(--main)  ;
+		color: var(--white) ;
+	}
+	&.dark {
+		background: var(--main) ;
+		color: var(--white) ;
+		&:hover {
+			background: var(--white) ;
+			color: var(--main) ;
+		}
+	}
+	svg {
+		transition:all .3s ease-in-out;
+	}
+}
+.fancybox-button {
+	min-width: auto ;
+	&:hover {
+		svg {
+			fill: var(--white) ;
+			color: var(--white) ;
+		}
+	}
+}
+/* Button additional styles */
+
+.button {
+	transition:all .3s ease-in-out;
+	&:hover, &:focus {
+		/*basic hover and focus effects*/
+	}
+}
+
+

@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Grand Project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-17 10:22+0000\n"
+"PO-Revision-Date: 2020-02-17 10:23+0000\n"
+"Last-Translator: k.piekarski <kontakt@karolpiekarski.pl>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#. Name of the theme
+msgid "Grand Project"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://karolpiekarski.pl/"
+msgstr ""
+
+#. Author of the theme
+msgid "Karol Piekarski"
+msgstr ""

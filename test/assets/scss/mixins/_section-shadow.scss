@@ -1,0 +1,7 @@
+@mixin section-shadow {
+  box-shadow: 0px 0px 50px 40px #000000 inset;
+}
+
+@mixin section-shadow--2 {
+  box-shadow: 5px 0px 35px 43px #0c0000 inset;
+}

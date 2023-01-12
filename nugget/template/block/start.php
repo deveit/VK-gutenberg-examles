@@ -1,0 +1,1 @@
+<section id="nugget-<?php echo $blockID ?>" class="nugget-section <?php echo $class ?>" >

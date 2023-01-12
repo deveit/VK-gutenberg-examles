@@ -1,0 +1,163 @@
+.hero {
+	padding: 12.8rem 0 4rem;
+	position: relative;
+
+	@include rwd('large-phone', true) {
+		padding: 15rem 0 7rem;
+	}
+
+	@include rwd('large-tablet', true) {
+		padding: 6.955rem 0 4rem;
+	}
+
+	&:after {
+		content: "";
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1401' height='202' viewBox='0 0 1401 202' fill='none'%3E%3Cpath d='M0.944641 4.32913C65.1609 18.2687 134.467 46.8785 162.519 110.896C170.121 128.268 170.654 136.86 169.532 148.441C168.72 156.823 165.775 175.169 154.15 177.062C142.525 178.955 139.091 166.112 140.513 158.041C141.769 150.899 145.659 143.271 150.016 137.059C157.329 126.641 171.41 118.171 190.293 114.417C236.782 105.183 264.289 150.146 296.308 174.128C346.71 211.894 413.338 225.535 475.398 220.63C604.92 210.367 731.496 171.98 848.192 115.901C933.025 75.1451 1019.78 18.933 1115.76 10.1086C1145.42 7.38495 1172.14 16.1539 1193.89 36.7698C1212.51 54.4074 1225.62 76.8723 1239.59 98.3518C1258.96 128.135 1281.31 151.763 1313.15 168.282C1340.11 182.277 1372.6 179.996 1403.24 155.815' stroke='url(%23paint0_linear_95_2366)' stroke-width='8' stroke-miterlimit='10'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_95_2366' x1='114.186' y1='319.165' x2='1338.51' y2='-132.128' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23AFA7FC' stop-opacity='0'/%3E%3Cstop offset='0.23663' stop-color='%237B61FF' stop-opacity='0.4'/%3E%3Cstop offset='1' stop-color='%237B61FF' stop-opacity='0.4'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+		width: 100%;
+		background-size: contain;
+		background-position: right;
+		background-repeat: no-repeat;
+		height: 202px;
+
+		position: absolute;
+		bottom: 20%;
+		z-index: -1;
+	}
+
+	&__wrapper {
+
+	}
+
+	&__text {
+		max-width: 83.4rem;
+		margin: 0 auto;
+
+		@include rwd('large-phone', true) {
+			max-width: 68.8rem;
+		}
+
+		p {
+			padding: 1.6rem 0 0;
+			color: $c-gray;
+			line-height: 160%;
+			letter-spacing: 0.005em;
+
+			@include rwd('large-phone', true) {
+				font-size: 2.2rem;
+				padding: 2rem 0 0;
+			}
+
+			@include rwd('large-tablet', true) {
+				padding: 2.4rem 0 0;
+			}
+		}
+	}
+
+	&__bg {
+		overflow: hidden;
+
+		&--center {
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			left: 50%;
+			transform: translate3D(-50%, 0, 0);
+
+			width: 37.5rem;
+			height: 37.5rem;
+			background: radial-gradient(circle, rgba(47, 172, 255, 0.25) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+
+			@include rwd('large-phone', true) {
+				left: 50%;
+				width: 78rem;
+				height: 78rem;
+			}
+		}
+
+		&:after,
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			width: 37.5rem;
+			height: 37.5rem;
+			left: calc(50% - 187px);
+
+			@include rwd('large-phone', true) {
+				width: 78rem;
+				height: 78rem;
+				left: calc(50% - 390px);
+			}
+		}
+
+		&:after {
+			transform: translate3D(-45%, 0, 0);
+			background: radial-gradient(circle, rgba(108, 207, 250, 0.25) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+
+
+			@include rwd('large-phone', true) {
+				transform: translate3D(-65%, 0, 0);
+			}
+		}
+
+		&:before {
+			transform: translate3D(45%, 0, 0);
+			background: radial-gradient(circle, rgba(127, 43, 223, 0.25) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+
+			@include rwd('large-phone', true) {
+				transform: translate3D(65%, 0, 0);
+			}
+		}
+	}
+
+	&__buttons {
+		padding: 2.4rem 0 0;
+
+		@include rwd('large-phone', true) {
+			padding: 3.2rem 0 0;
+		}
+
+		.buttonComponent {
+			display: inline-flex;
+			flex-direction: column;
+			align-content: center;
+			width: 100%;
+
+			@include rwd('tablet', true) {
+				margin: 0 -1.8rem;
+			}
+
+			&__single {
+				padding: 2rem 0 0;
+			}
+
+			@include rwd('large-phone', true) {
+				flex-direction: row;
+				justify-content: center;
+
+				&__single {
+					padding: 0 1.8rem;
+				}
+			}
+		}
+	}
+
+	&__image {
+		padding: 4rem 0 0;
+
+		@include rwd('large-phone', true) {
+			padding: 3.9rem 0 0;
+			max-width: 568px;
+			margin: 0 auto;
+		}
+
+		@include rwd('large-tablet', true) {
+			padding: 8rem 0 1rem;
+			max-width: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

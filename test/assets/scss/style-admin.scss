@@ -1,0 +1,97 @@
+@import "_variables";
+
+body .is-root-container {
+
+	.editor-styles-wrapper {
+
+	}
+
+	.editor-styles-wrapper {
+		.block-editor-block-list__block {
+			padding: 10px 25px;
+			margin-top: 0 ;
+			margin-bottom: 0 ;
+		}
+	}
+
+	/****************************/
+	/******** BASE START ********/
+	/****************************/
+
+	@import "fonts/*";
+	@import "mixins/*";
+	// @import "base/normalize";
+	@import "base/base_wordpress";
+	@import "base/base-admin";
+	@import "components/cf7";
+	@import "fonts/fonts";
+	// @import "pages/single-post";
+	/**************************/
+	/******** BASE END ********/
+	/**************************/
+
+	/**********************************/
+	/******** COMPONENTS START ********/
+	/**********************************/
+	.editor-styles-wrapper {
+		margin: 0 0 0 0 ;
+	}
+	.acf-color-picker  * {
+		box-sizing: unset;
+	}
+	.wow {
+		visibility: visible !important;
+	}
+	// .image-section {
+	// 	position: relative;
+	// 	&:before {
+	// 		content: 'Image section' ;
+	// 		position: absolute;
+	// 		text-align: center;
+	// 		font-weight: 700;
+	// 		font-size: 24px;
+	// 		width: 100%;
+	// 		top: 50%;
+	// 		z-index: 1;
+	// 		transform: translateY(-50%);
+	// 	}
+	// 	div {
+	// 		position: relative;
+	// 		z-index: 2;
+	// 	}
+	// }
+	// .space-section {
+	// 	min-height: 50px ;
+	// 	display: flex;
+	// 	align-items: center ;
+	// 	justify-content: center;
+	// 	border: 2px solid #B4BDC0;
+	// 	&:before {
+	// 		content: 'Space block' ;
+	// 		display: block;
+	// 		font-weight: 700;
+	// 		font-size: 24px;
+	// 	}
+	// }
+
+  // @import "components/btns";
+  // @import "components/owl-carousel";
+
+  /********************************/
+  /******** COMPONENTS END ********/
+  /********************************/
+
+  /******************************/
+  /******** BLOCKS ********/
+  /******************************/
+  @import "components/*";
+  @import "../../template/block/**/*";
+
+
+}
+
+
+// .acf-menu-item-fields.acf-fields {
+// 	width: 100%;
+// }
+

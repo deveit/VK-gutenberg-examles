@@ -1,0 +1,44 @@
+$Primary : (
+  (
+    'name'   : 'Thin',
+    'weight' : 100,
+    'style'  : 'normal'
+  ),
+  (
+    'name'   : 'Light',
+    'weight' : 300,
+    'style'  : 'normal'
+  ),
+  (
+    'name'   : 'Regular',
+    'weight' : 400,
+    'style'  : 'normal'
+  ),
+  (
+    'name'   : 'Bold',
+    'weight' : 700,
+    'style'  : 'normal'
+  ),
+  (
+    'name'   : 'Black',
+    'weight' : 900,
+    'style'  : 'normal'
+  )
+);
+
+$f-Primary: 'Lato', sans-serif;
+
+$fw-Thin: 300;
+$fw-Light: 300;
+$fw-Regular: 400;
+$fw-Medium: 600;
+$fw-Bold: 700;
+$fw-Black: 900;
+
+
+
+// Thin 100
+// Light 300
+// Regular 400
+// Bold 700
+// Black 900

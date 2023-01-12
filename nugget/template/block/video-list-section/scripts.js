@@ -1,0 +1,5 @@
+//alert('dziala');
+
+//$g.aa();
+
+

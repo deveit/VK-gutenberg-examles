@@ -1,0 +1,18 @@
+.button-section {
+	.row {
+		.text-center {
+			.custom-button {
+				margin: 0 5px 10px 5px ;
+				@include media-min(768px) {
+					margin: 0 8px 15px 8px ;
+				}
+			}
+		}
+	}
+}
+.buttons-container {
+	margin: 32px 0 0 0 ;
+	@include media-min(768px) {
+		margin: 64px 0 0 0 ;
+	}
+}

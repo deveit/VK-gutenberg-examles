@@ -1,0 +1,330 @@
+.header {
+	padding: 2.8rem 0;
+	position: fixed;
+	background: $c-white;
+	min-height: 8.8rem;
+	z-index: 10;
+	width: 100%;
+	top: 0;
+	left: 0;
+	@include rwd('large-tablet', true) {
+		position: static;
+		background: transparent;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 13.5rem;
+		height: 3rem;
+		object-fit: contain;
+		vertical-align: top;
+
+		@include rwd('tablet', true) {
+			width: 18rem;
+			height: 4rem;
+		}
+	}
+
+	&__input {
+		display: none;
+		&:checked + .header__burger {
+			span {
+				&:nth-child(1),
+				&:nth-child(6) {
+					transform: rotate(45deg);
+				}
+				&:nth-child(2),
+				&:nth-child(5) {
+					transform: rotate(-45deg);
+				}
+				&:nth-child(1) {
+					left: .1rem;
+					top: .4rem;
+				}
+				&:nth-child(2) {
+					left: calc(50% - .2rem);
+					top: .4rem;
+				}
+				&:nth-child(3) {
+					left: -50%;
+					opacity: 0;
+				}
+				&:nth-child(4) {
+					left: 100%;
+					opacity: 0;
+				}
+				&:nth-child(5) {
+					left: .1rem;
+					top: 1.2rem;
+				}
+				&:nth-child(6) {
+					left: calc(50% - .2rem);
+					top: 1.2rem;
+				}
+			}
+		}
+		&:checked + .header__burger + .menu-header-menu-container {
+			left: 0;
+			@include rwd('tablet', true) {
+				left: auto;
+				right: 0;
+				&:before {
+					width: 100vw;
+					position: absolute;
+					content: '' ;
+					background: #000;
+					top: 0;
+					left: -100vw;
+					top: 0;
+					height: 100%;
+					z-index: 10;
+					opacity: 0.35;
+				}
+			}
+			@include rwd('large-tablet', true) {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	&__burger {
+		margin-right: .7rem;
+		@include rwd('tablet', true) {
+			margin-right: 0;
+		}
+		@include rwd('large-tablet', true) {
+			display: none;
+
+		}
+		&-icon {
+			width: 2.2rem;
+			height: 1.9rem;
+			position: relative;
+			transform: rotate(0deg);
+			transition: .5s ease-in-out;
+			cursor: pointer;
+			span {
+				height: 0.3rem;
+				border-radius: 0.15rem ;
+				display: block;
+				position: absolute;
+				width: 50%;
+				background: $c-main-dark ;
+				opacity: 1;
+				transform: rotate(0deg);
+				transition: .25s ease-in-out;
+				&:nth-child(even) {
+					border-radius: 0 0.15rem 0.15rem 0;
+					left: 50%;
+				}
+				&:nth-child(odd) {
+					border-radius: 0.15rem  0 0 0.15rem;
+					left:0px;
+				}
+				&:nth-child(1),
+				&:nth-child(2) {
+					top: 0px;
+				}
+				&:nth-child(3),
+				&:nth-child(4) {
+					top: .8rem;
+				}
+				&:nth-child(5),
+				&:nth-child(6) {
+					top: 1.6rem;
+				}
+			}
+		}
+
+	}
+	.menu-header-menu-container {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		background: $c-white;
+		top: 8.8rem;
+		left: 100%;
+		transition: all .3s ease ;
+		padding: .4rem 2rem 2rem 2rem;
+		@include rwd('tablet', true) {
+			max-width: 37.5rem;
+			left: auto;
+			right: -37.5rem;
+		}
+		@include rwd('large-tablet', true) {
+			position: static;
+			right: auto ;
+			left: auto;
+			max-width: none ;
+			width: auto;
+			padding: 0 ;
+			background: transparent;
+		}
+		.header-menu {
+			overflow: auto;
+			max-height: 100% ;
+			@include rwd('large-tablet', true) {
+				overflow: visible;
+			}
+		}
+	}
+	.menu {
+		@include rwd('large-tablet', true) {
+			display: flex;
+			> li + li {
+				margin: 0 0 0 3rem;
+				&:last-child {
+					> .sub-menu {
+						left: auto;
+						right: -2rem;
+					}
+				}
+			}
+		}
+		li {
+			position: relative;
+			@include rwd('large-tablet') {
+				&:hover,&:focus {
+					> a {
+						background: $c-light-blue ;
+						color: $c-accent ;
+					}
+				}
+			}
+			&:hover {
+				@include rwd('large-tablet', true) {
+					> .sub-menu {
+						display: block !important;
+						position: absolute;
+						z-index: 3;
+					}
+				}
+				> .open-submenu-label {
+					> svg {
+						fill: $c-accent ;
+					}
+				}
+			}
+			&.has-dropdown {
+				@include rwd('large-tablet', true) {
+					&:hover {
+						> a {
+							color: $c-accent ;
+						}
+					}
+				}
+				a {
+					padding: 1.4rem 2.2rem 1.4rem 1.6rem;
+					@include rwd('large-tablet', true) {
+						padding: 1.4rem 2.2rem 1.4rem 1.6rem;
+					}
+				}
+			}
+			@include rwd('large-tablet', true) {
+				> a {
+					font-style: normal;
+					font-weight: 900;
+					font-size: 1.8rem;
+					line-height: 2.4rem;
+					letter-spacing: 0.01em;
+				}
+			}
+			a {
+				transition: all .3s ease ;
+				border-radius: .8rem;
+				display: block;
+				padding: 1.4rem 1.6rem;
+				&:hover {
+					background: $c-light-blue ;
+					color: $c-accent ;
+					@include rwd('large-tablet',true) {
+						background: transparent;
+					}
+				}
+			}
+
+		}
+		.open-submenu {
+			display: none;
+		}
+		.open-submenu:checked + .open-submenu-label + .sub-menu {
+			display: block;
+		}
+		.open-submenu:checked + .open-submenu-label {
+			svg {
+				fill: $c-accent  ;
+				transform: rotate(0);
+			}
+		}
+		.open-submenu-label {
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			top: 1.7rem;
+			right: 1.2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include rwd('large-tablet', true) {
+				pointer-events: none ;
+				right: 0;
+				width: 1.4rem;
+				height: 1.6rem;
+				top: 1.9rem;
+			}
+			svg {
+				width: 1.6rem;
+				height: 1rem;
+				fill: $c-main-dark ;
+				transition: all .3s ease ;
+				transform: rotate(-90deg);
+				@include rwd('large-tablet', true) {
+					transform: rotate(0deg);
+					width: 1.4rem;
+					height: 1.6rem;
+				}
+			}
+		}
+		.sub-menu {
+			padding: 1.2rem 0 1.2rem 2rem ;
+			display: none;
+			@include rwd('large-tablet', true) {
+				width: 32.5rem;
+				background: $c-white ;
+				box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.07);
+				border-radius: 1.2rem;
+				padding: 1rem 0 ;
+				position: absolute;
+				display: none !important;
+			}
+			@include rwd('large-tablet', true) {
+				.open-submenu-label {
+					right: 2.7rem;
+					top: 1.7rem;
+					svg {
+						transform: rotate(-90deg);
+						width: 1.6rem;
+						height: 1rem;
+					}
+				}
+				.sub-menu {
+					top: 0;
+					left: 100%;
+				}
+				a {
+					&:hover {
+						background: $c-light-blue ;
+					}
+				}
+				> li {
+					padding: 0 1rem ;
+				}
+			}
+		}
+	}
+}

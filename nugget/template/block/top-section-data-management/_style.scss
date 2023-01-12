@@ -1,0 +1,52 @@
+.top-section-data-management {
+	.row {
+		mix-blend-mode: multiply;
+	}
+	.light-frame {
+		padding: 16px 16px 32px 16px;
+		@include media-min(768px) {
+			padding: 16px 32px 96px 32px;
+			&:after {
+				content: '' ;
+				position: absolute;
+				z-index: 2 ;
+				top: 50px;
+				right: 50px ;
+				width: 365px;
+				height: 482px;
+				pointer-events: none ;
+				background: url('../template/block/top-section-data-management/img/ketchup-2.png') no-repeat center / contain ;
+			}
+		}
+
+	}
+	.transform-rotate--1 {
+		position: relative;
+		z-index: 2;
+	}
+	.custom-heading {
+		margin: 0 0 -50px 0 ;
+		@include media-min(768px) {
+			margin: 0 0 -95px 0 ;
+		}
+		br {
+			display: block;
+		}
+	}
+
+	picture {
+		display: block;
+		// max-width: 1070px ;
+		margin: 0 auto 0 ;
+		width: 100%;
+		transform: rotate(-3deg);
+		@include media-min(768px) {
+			transform: rotate(-1.5deg);
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain ;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+/***************************/
+/******** BASE START ********/
+/****************************/
+
+@import "fonts/*";
+@import "variables";
+@import "mixins/*";
+
+@import "base/normalize";
+@import "base/base_wordpress";
+@import "base/base";
+
+/**************************/
+/******** BASE END ********/
+/**************************/
+
+/**********************************/
+/******** COMPONENTS START ********/
+/**********************************/
+@import "components/*";
+// @import "components/wpml-switcher";
+// @import "components/fancybox";
+// @import "components/owl-carousel";
+
+
+/********************************/
+/******** COMPONENTS END ********/
+/********************************/
+
+
+
+/********************************/
+/******** PLUGINS START ********/
+/********************************/
+
+@import "plugins/slick";
+
+/********************************/
+/******** PLUGINS END ********/
+/********************************/
+
+/********************************/
+/******** SECTIONS START ********/
+/********************************/
+
+@import "sections/header";
+@import "sections/footer";
+
+
+/******************************/
+/******** SECTIONS END ********/
+/******************************/
+
+/*****************************/
+/******** PAGES START ********/
+/*****************************/
+
+@import "pages/page";
+@import "pages/page404";
+
+/***************************/
+/******** PAGES END ********/
+/***************************/
+
+/******************************/
+/******** BLOCKS ********/
+/******************************/
+
+/*@import "blocks/header";
+@import "blocks/comic-book";
+@import "blocks/products";
+@import "blocks/about-mieszko";
+@import "blocks/thx-mieszko";
+@import "blocks/contact";
+@import "blocks/single-content";*/
+@import "../../template/block/**/*";
+
+/****************************/
+/******** OTHERS END ********/
+/***************************/

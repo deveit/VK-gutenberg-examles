@@ -1,0 +1,8 @@
+@function vw($value) {
+    @if (unit($value) == 'px') {
+        $result: (strip-units($value) / (1903 * 0.01));
+        @return #{$result}vw;
+    }
+
+    @return $value;
+}

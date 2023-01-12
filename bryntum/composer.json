@@ -1,0 +1,19 @@
+{
+  "name": "kpiekarski/basic-project",
+  "description": "WordPress Starter Theme",
+  "authors": [
+    {
+      "name": "Karol Piekarski",
+      "email": "kontakt@karolpiekarski.pl",
+      "homepage": "https://karolpiekarski.pl/",
+      "role": "Web Developer"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "WPAdvanced\\": "functions/WPAdvanced",
+      "SiteManagement\\": "functions/SiteManagement"
+    }
+  }
+}

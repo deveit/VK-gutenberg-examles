@@ -1,0 +1,164 @@
+.section-columns {
+  padding: 4rem 0 1.6rem 0;
+  position: relative;
+
+  @include rwd('tablet', true) {
+    padding: 4rem 0 .8rem 0;
+  }
+
+  &__bg {
+    overflow: hidden;
+
+    &--center {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      left: 50%;
+      transform: translate3D(-50%, -44%, 0);
+
+      width: 37.5rem;
+      height: 37.5rem;
+      background: radial-gradient(circle, rgba(47, 172, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+      @include rwd('large-phone', true) {
+        left: 50%;
+        width: 78rem;
+        height: 78rem;
+        transform: translate3D(-50%, -22%, 0);
+      }
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 37.5rem;
+      height: 37.5rem;
+      left: calc(50% - 187px);
+
+      @include rwd('large-phone', true) {
+        width: 78rem;
+        height: 78rem;
+        left: calc(50% - 390px);
+      }
+
+      @include rwd('large-tablet', true) {
+        top: 0;
+      }
+    }
+
+    &:after {
+      transform: translate3D(-60%, -22%, 0);
+      background: radial-gradient(circle, rgba(108, 207, 250, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+      @include rwd('large-tablet', true) {
+        transform: translate3D(-70%, 20%, 0);
+      }
+    }
+
+    &:before {
+      transform: translate3D(60%, -22%, 0);
+      background: radial-gradient(circle, rgba(127, 43, 223, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+      @include rwd('large-tablet', true) {
+        transform: translate3D(60%, -10%, 0)
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 4rem;
+  }
+
+  &__row {
+    @include rwd('large-tablet', true) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -2rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+
+    @include rwd('tablet', true) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include rwd('large-tablet', true) {
+      width: 33.3333%;
+      padding: 0 2rem;
+    }
+  }
+
+  &__item-content {
+    width: 100%;
+    max-width: 45.2rem;
+    padding: 3.2rem 2.4rem;
+    background: $c-white;
+    border-radius: 1.6rem;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
+
+    @include rwd('large-phone', true) {
+      box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.04);
+      height: 100%;
+      padding: 4rem 3.2rem;
+    }
+
+    @include rwd('large-tablet', true) {
+      padding: 6rem 4rem;
+    }
+  }
+
+  &__item-text {
+
+    :is(h1, h2, h3, h4, h5, h6) {
+      margin-bottom: 1.2rem;
+
+      @include rwd('large-phone', true) {
+        margin-bottom: 1.7rem;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      font-feature-settings: 'liga' off;
+      color: $c-gray;
+    }
+  }
+
+  &__item-image {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: $c-light-blue;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    @include rwd('large-phone', true) {
+      width: 6.2rem;
+      height: 6.2rem;
+    }
+
+    @include rwd('large-tablet', true) {
+      margin-bottom: 3rem;
+    }
+
+    img, svg {
+      width: 1.9rem;
+      height: 2.42rem;
+      object-fit: contain;
+      @include rwd('tablet', true) {
+        height: 3.1rem;
+        width: 2.6rem;
+      }
+    }
+  }
+}

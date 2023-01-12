@@ -1,0 +1,68 @@
+.work-with-us-2-columns {
+	@include media-min(768px) {
+		.light-frame {
+			&.has-decoration {
+				&:after {
+					content: '' ;
+					position: absolute;
+					bottom: 30px;
+					left: -50px;
+					width: 350px;
+					height: 219px;
+					pointer-events: none ;
+					background: url('../template/block/work-with-us-2-columns/img/nugget-crumbs.png') no-repeat 0 0 / 100% auto ;
+					z-index: 3;
+				}
+			}
+		}
+	}
+	.row {
+		@include media-min(768px) {
+			display: flex;
+			flex-wrap: wrap ;
+			justify-content: center;
+			max-width: 970px ;
+		}
+		.column {
+			@include media-min(768px) {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+			}
+			& + .column {
+				margin: 32px 0 0 0;
+				@include media-min(768px) {
+					margin: 0;
+				}
+			}
+			.column-image {
+				flex-grow: 1 ;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 0 8px 0 ;
+				@include media-min(768px) {
+					margin: 0 0 16px 0 ;
+				}
+			}
+			.work-with-us-column-content {
+				@include media-min(768px) {
+					// max-width: 250px ;
+					margin: auto auto 0 ;
+				}
+				.column-text {
+					@include media-min(768px) {
+						max-width: 260px ;
+						margin: auto auto 0 ;
+					}
+					p {
+						@include media-min(768px) {
+							font-size: 12px;
+							line-height: 125%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

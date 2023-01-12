@@ -1,0 +1,27 @@
+.contact-form-section {
+	@include media-max(767px) {
+		.contact-form {
+			transform: rotate(0);
+		}
+	}
+	.light-frame {
+		@include media-min(768px) {
+			padding: 10px 32px 96px 32px;
+			&:after {
+				content: '' ;
+				position: absolute ;
+				pointer-events: none ;
+				top: 190px;
+				right: 30px;
+				width: 181px;
+				height: 240px;
+				background: url('../template/block/contact-form-section/img/ketchup.png') no-repeat 0 0 / 100% auto ;
+				z-index: 3;
+			}
+		}
+		.row {
+			mix-blend-mode: multiply;
+			max-width: 610px ;
+		}
+	}
+}

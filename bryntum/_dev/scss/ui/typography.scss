@@ -1,0 +1,168 @@
+.h1_style h1,.h1_style, h1 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Black;
+	font-size: 4rem;
+	line-height: 4.6rem;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 4.6rem;
+		line-height: 115%;
+		letter-spacing: 0.005em;
+	}
+
+	@include rwd('large-tablet', true) {
+		font-size: 6rem;
+		line-height: 115%;
+	}
+}
+.h2_style h2,.h2_style, h2 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Bold;
+	font-size: 2.8rem;
+	line-height: 120%;
+	letter-spacing: 0.005em;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 3.4rem;
+		line-height: 120%;
+	}
+
+	@include rwd('large-tablet', true) {
+		font-size: 4.2rem;
+		line-height: 125%;
+	}
+}
+.h3_style h3,.h3_style, h3 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Bold;
+	font-size: 2.4rem;
+	line-height: 135%;
+	letter-spacing: 0.005em;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 2.8rem;
+		line-height: 135%;
+	}
+
+	@include rwd('large-tablet', true) {
+		font-size: 3.6rem;
+		line-height: 135%;
+	}
+}
+.h4_style h4,.h4_style, h4 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Bold;
+	font-size: 2.2rem;
+	line-height: 134%;
+	letter-spacing: 0.005em;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 2.6rem;
+		line-height: 134%;
+	}
+
+	@include rwd('large-tablet', true) {
+		font-size: 3rem;
+		line-height: 134%;
+	}
+}
+.h5_style h5,.h5_style, h5 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Bold;
+	font-size: 2rem;
+	line-height: 128%;
+	letter-spacing: 0.005em;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 2.4rem;
+		line-height: 128%;
+	}
+}
+.h6_style h6,.h6_style, h6 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Bold;
+	font-size: 1.8rem;
+	line-height: 120%;
+	letter-spacing: 0.01em;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 2rem;
+		line-height: 120%;
+	}
+}
+
+
+.paragraph-style-1 p,.paragraph-style-1 {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Regular;
+	font-size: 1.8rem;
+	line-height: 160%;
+	letter-spacing: 0.005em;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 2.2rem;
+		line-height: 160%;
+	}
+}
+.paragraph-style-2 p,.paragraph-style-2,p {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Regular;
+	font-size: 1.6rem;
+	line-height: 160%;
+	color: $c-main-dark;
+
+	@include rwd('large-phone', true) {
+		font-size: 1.8rem;
+		line-height: 160%;
+	}
+}
+.label {
+	font-family: $f-Primary;
+	font-style: normal;
+	color: $c-main-dark;
+
+	&--1 {
+		font-weight: $fw-Black;
+		letter-spacing: 0.01em;
+		font-size: 1.8rem;
+		line-height: 132%;
+	}
+
+	&--2 {
+		font-weight: $fw-Bold;
+		letter-spacing: 0.01em;
+		font-size: 1.6rem;
+		line-height: 120%;
+	}
+
+	&--3 {
+		font-weight: $fw-Regular;
+		font-size: 1.6rem;
+		line-height: 120%;
+	}
+}
+
+.captions {
+	font-family: $f-Primary;
+	font-style: normal;
+	font-weight: $fw-Regular;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	color: $c-main-dark;
+	letter-spacing: 0.005em;
+}

@@ -1,0 +1,38 @@
+.transform-rotate {
+	&--3 {
+		transform: rotate(-3deg);
+	}
+	&--2-5 {
+		transform: rotate(-2.5deg);
+	}
+	&--2 {
+		transform: rotate(-2deg);
+	}
+	&--1-5 {
+		transform: rotate(-1.5deg);
+	}
+	&--1 {
+		transform: rotate(-1deg);
+	}
+	&--0-5 {
+		transform: rotate(-0.5deg);
+	}
+	&-0-5 {
+		transform: rotate(0.5deg);
+	}
+	&-1 {
+		transform: rotate(1deg);
+	}
+	&-1-5 {
+		transform: rotate(1.5deg);
+	}
+	&-2 {
+		transform: rotate(2deg);
+	}
+	&-2-5 {
+		transform: rotate(2.5deg);
+	}
+	&-3 {
+		transform: rotate(3deg);
+	}
+} 

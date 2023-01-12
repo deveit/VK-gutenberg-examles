@@ -1,0 +1,101 @@
+.two-boxes-text-image {
+  padding: 4rem 0;
+
+  @include rwd('tablet', true) {
+    padding: 5rem 0;
+  }
+
+  @include rwd('large-tablet', true) {
+    padding: 8rem 0 6rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+
+    @include rwd('large-tablet', true) {
+      margin-right: -2rem;
+      margin-left: -2rem;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+
+    flex-basis: 100%;
+    max-width: 100%;
+
+    &:last-child {
+      padding-top: 2.4rem;
+
+      @include rwd('large-phone', true) {
+        padding: 6rem 0 0;
+      }
+
+      @include rwd('tablet', true) {
+        padding-top: 0;
+      }
+
+      @include rwd('large-tablet', true) {
+        padding-top: 0;
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+    }
+
+    @include rwd('large-phone', true) {
+      flex-basis: 45.2rem;
+      max-width: 45.2rem;
+      margin: 0 auto;
+    }
+
+    @include rwd('large-tablet', true) {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  &__image {
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 2px 2px 14px rgba(0, 0, 0, .04);
+    }
+  }
+
+  &__content {
+
+    @include rwd('large-phone', true) {
+      padding: 0;
+    }
+
+    @include rwd('tablet', true) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__text {
+    padding: 2.4rem 0 0;
+
+    @include rwd('tablet', true) {
+      padding: 3rem 0 0;
+    }
+
+    p {
+      padding-top: 1.4rem;
+    }
+  }
+
+  &__button {
+    padding: 1.6rem 0 0;
+
+    @include rwd('large-tablet', true) {
+      padding: 2.6rem 0 0;
+    }
+  }
+}

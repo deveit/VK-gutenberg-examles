@@ -1,0 +1,137 @@
+{
+    "key": "group_6231b161604ff",
+    "title": "Field Group: Buttons",
+    "fields": [
+        {
+            "key": "field_6231b172b3082",
+            "label": "Centered buttons",
+            "name": "centered_buttons",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6231b1d095e7c",
+            "label": "Button",
+            "name": "button",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6231b1e495e7d",
+                    "label": "Button link",
+                    "name": "button_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6231b1fc95e7e",
+                    "label": "Button color style",
+                    "name": "button_color_style",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "dark": "Dark",
+                        "light": "Light",
+                        "link": "Link",
+                        "link_arrow": "Link + arrow"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-two-boxes-text-image"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-text-languages"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-quote-image"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-text-image"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-post-list"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-with-3-columns"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1648704849
+}

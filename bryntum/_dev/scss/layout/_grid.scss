@@ -1,0 +1,58 @@
+/*
+
+  This grid is a simplified version of Bootstrap Grid system:
+  https://getbootstrap.com/docs/3.3/css/#grid
+
+  Available classes:
+    • container (or container-fluid)
+*/
+
+
+
+$gridWidth  : 1440px !default;
+$gridGutter : 20px !default;
+$rtlActive  : false !default;
+$mobileFirst : false;
+
+.container {
+  width: 100%;
+  max-width: 136rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  @include rwd('large-phone') {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &--small {
+    width: 100%;
+    max-width: (840px + ($gridGutter * 2));
+    padding-left: 0;
+    padding-right: 0;
+
+    @include rwd('laptop') {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  &--fluid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

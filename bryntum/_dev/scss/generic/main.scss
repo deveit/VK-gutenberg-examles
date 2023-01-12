@@ -1,0 +1,72 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1;
+}
+
+html img {
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  font-family: $f-Primary;
+  font-weight: 400;
+  color: $c-black;
+  background: $c-body-bg;
+}
+
+h1 {
+
+}
+
+// h2 {
+//   font-weight: $fw-Bold;
+//   font-size: 4.2rem;
+//   line-height: 125%;
+//   letter-spacing: 0.005em;
+//   font-feature-settings: 'liga' off;
+//   color: $c-main-dark;
+//   padding-bottom: 16px;
+// }
+
+p {
+  font-weight: $fw-Regular;
+  font-size: 1.8rem;
+  line-height: 160%;
+  font-feature-settings: 'liga' off;
+  color: $c-main-dark;
+  padding-bottom: 8px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.row {
+  max-width: 136rem ;
+  margin: 0 auto 0 ;
+  @include rwd('tablet', true) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  &.column {
+    @include rwd('tablet', true) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+}
+
+.column {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+.page {
+  overflow-x: hidden;
+}

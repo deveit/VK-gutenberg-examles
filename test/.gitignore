@@ -1,0 +1,9 @@
+*.log
+.env
+.idea
+.sass-cache
+.DS_Store
+.vscode
+/node_modules
+style.min.css
+style-admin.min.css

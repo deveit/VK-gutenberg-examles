@@ -1,0 +1,271 @@
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
+}
+.wpcf7-form {
+	.form-row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		position: relative;
+		&.last-row {
+			margin: -10px 0 0 0 ; 
+			@include media-min(768px) {
+				margin: -10px 0 0 0 ; 
+			}
+		}
+		.form-item {
+			width: 100%;
+			margin: 0 0 16px 0 ;
+			&.file {
+				label {
+					cursor: pointer ;
+
+					.wpcf7-form-control-wrap {
+						display: none ;
+					}
+					.file-name {
+						display: flex ;
+						padding: 10px 10px ;
+						border: 1.5px solid $main_color ;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						margin: 8px 0 0 0 ;
+						font-size: 12px;
+						line-height: 125%;
+						color: rgba(0, 0, 0, 0.45) ;
+						@include media-min(768px) {
+							min-height: 96px ;
+							padding: 16px 16px ;
+							font-size: 16px;
+						}
+						&:before {
+							content: '' ;
+							width: 13px ;
+							height: 16px ;
+							margin: 0 10px 0 0 ;
+							background: url('../template/block/contact-form-section/img/upload.svg') no-repeat center / 100% auto ; 
+							@include media-min(768px) {
+								width: 19px ;
+								height: 25px ;
+							}
+						}
+					}
+				}
+			}
+			
+			label {
+				display: block;
+				width: 100%;
+				color: $main_color ;
+				font-family: $font;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 125%;
+				display: flex;
+				flex-direction: column;
+				@include media-min(768px) {
+					font-size: 16px;
+					line-height: 130%;
+					letter-spacing: 0.5px;
+				}
+				&.select-label {
+					margin: 0 0 8px 0 ;
+				}
+				.wpcf7-form-control-wrap {
+					display: inline-block;
+					width: 100%;
+					margin: 8px 0 0 0 ;
+				}
+
+			}
+			.wpcf7-list-item {
+				margin: 0 0 0 0 ;
+			}
+			br {
+				display: none;
+			}
+
+
+			.selectric-wrapper .selectric,
+			input:not([type="submit"]),textarea,select {
+				width: 100%;
+				border-radius: 0px;
+				background-color: transparent ;
+				font-family: $font;
+				color: $main_color;
+				outline: none ;
+				resize: none ;
+				appearance: none ;
+				border: 1.5px solid $main_color ;
+				padding: 10px 10px ;
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 125%;
+				@include media-min(768px) {
+					padding: 15px 15px ;
+					font-size: 16px;
+					line-height: 125%;
+				}
+				&[type="file"] {
+					display: none;
+				}
+				option {
+					color: $main_color ;
+				}
+				@include placeholder {
+					font-family: $font;
+					color: $main_color;
+					font-weight: 700;
+					font-size: 12px;
+					line-height: 125%;
+					opacity: .5 ;
+					@include media-min(768px) {
+						font-size: 16px;
+					}
+				}
+				&.wpcf7-not-valid {
+					border: 1px solid $main_color ;
+				}
+			}
+			.selectric-wrapper {
+				&.selectric-open {
+					.selectric {
+						border-bottom: 1px solid transparent !important;
+						.button {
+							transform: rotate(-180deg);
+						}
+					}
+				}
+				.selectric-items {
+					width: 100% !important ;
+					border: 1px solid $main_color ;
+					border-top: none;
+					box-shadow: none;
+					margin: -1px 0 0 0 ;
+					background: $white;
+					li {
+						padding: 12px 12px ;
+						@include transition ;
+						background: transparent ;
+						text-transform: none;
+						font-weight: 700;
+						font-size: 12px;
+						line-height: 125%;
+						color: rgba(0, 0, 0, 0.45);
+						@include media-min(768px) {
+							font-size: 16px;
+							line-height:125%;
+							padding: 16px 16px ;
+						}
+						&:hover,&.highlighted {
+							color: $orange ;
+						}
+						&[data-index="0"] {
+							display: none;
+						}
+					}
+					.selectric-scroll {
+						-ms-overflow-style: none;  /* IE and Edge */
+						scrollbar-width: none;  /* Firefox */
+						&::-webkit-scrollbar {
+							display: none;
+						}
+					}
+				}
+				.selectric {
+					padding: 10px 25px 10px 10px;
+					overflow: hidden;
+					min-height: 38px ;
+					@include media-min(768px) {
+						padding: 15px 30px 15px 15px;
+						min-height: 52px ;
+					}
+					.label {
+						margin: 0 0 ;
+						line-height: unset ;
+						height: auto;
+						text-transform: none;
+						@include media-min(768px) {
+							font-size: 16px;
+							line-height:125%;
+						}
+					}
+					.button {
+						width: 10px;
+						height: 10px;
+						margin: 12px 12px 0 0 ;
+						padding: 0 0 0 0 ;
+						border: none ;
+						line-height: unset;
+						min-width: auto ;
+						font-size: 0 ;
+						transition: unset ;
+						background: transparent url('../template/block/contact-form-section/img/arrow.svg') no-repeat center / contain ;
+						@include media-min(768px) {
+							width: 14px;
+							height: 14px;
+							margin: 16px 16px 0 0 ;
+						}
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+			select {
+				cursor: pointer ;
+			}
+			textarea {
+				height: 160px ;
+			}
+			input[type="submit"],button {
+				margin: 16px 0 0 0;
+				min-width: 190px ;
+			}
+
+			.wpcf7-not-valid-tip {
+				font-weight: 700;
+				font-family: $font ;
+				font-size: 12px;
+				line-height: 1;
+				text-transform: none;
+				margin: 8px 0 0 0 ;
+			}
+		}
+	}
+	.ajax-loader {
+		display: none !important;
+	}
+}
+div.wpcf7-validation-errors, 
+div.wpcf7-acceptance-missing,
+div.wpcf7-mail-sent-ok {
+	padding: 20px 20px ;
+	font-family: $font ;
+	margin: 25px 0 0 0 ;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	padding: 10px 15px ;
+	color: $main_color ;
+	font-size: 11px;
+	margin: 10px 0 ;
+	@include media-min(768px) {
+		padding: 10px 15px ;
+		font-size: 12px;
+	}
+}
+
+div.wpcf7-validation-errors, 
+div.wpcf7-acceptance-missing,
+div.wpcf7-mail-sent-ok {
+	color: $main_color ;
+}
+
+

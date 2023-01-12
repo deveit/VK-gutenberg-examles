@@ -1,0 +1,111 @@
+.text-button {
+  padding: 5rem 0;
+  position: relative;
+
+  @include rwd('large-phone', true) {
+    padding: 8rem 0 6rem;
+  }
+
+  @include rwd('large-tablet', true) {
+    padding: 8rem 0;
+  }
+
+  &__bg {
+    overflow: hidden;
+
+    &--center {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      left: 50%;
+      transform: translate3D(-50%, -44%, 0);
+
+      width: 37.5rem;
+      height: 37.5rem;
+      background: radial-gradient(circle, rgba(47, 172, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+
+      @include rwd('large-phone', true) {
+        left: 50%;
+        width: 78rem;
+        height: 78rem;
+        transform: translate3D(-50%, -22%, 0);
+      }
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 37.5rem;
+      height: 37.5rem;
+      left: calc(50% - 187px);
+
+      @include rwd('large-phone', true) {
+        width: 78rem;
+        height: 78rem;
+        left: calc(50% - 390px);
+      }
+
+      @include rwd('large-tablet', true) {
+        top: 0;
+      }
+    }
+
+    &:after {
+      transform: translate3D(-60%, -22%, 0);
+      background: radial-gradient(circle, rgba(108, 207, 250, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:before {
+      transform: translate3D(60%, -22%, 0);
+      background: radial-gradient(circle, rgba(127, 43, 223, 0.25) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  &__wrapper {
+    padding: 4rem 2.4rem;
+    background-color: $c-white;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.04);
+    border-radius: 1.6rem;
+
+    @include rwd('large-phone', true) {
+      padding: 6rem 2.4rem;
+    }
+
+    @include rwd('large-tablet', true) {
+      padding: 8rem 11rem 5.7rem;
+    }
+
+
+    @include rwd('large-tablet', true) {
+
+      &:after {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='589' viewBox='0 0 1440 589' fill='none'%3E%3Cpath opacity='0.8' d='M-158 371.458C537.316 573.15 606.771 4.00254 1032.15 3.99987C1313.24 3.9981 1538.96 276.071 1442.24 587' stroke='url(%23paint0_linear_95_2410)' stroke-width='8'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_95_2410' x1='1466.29' y1='307.54' x2='-273.721' y2='67.4027' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+        width: 100%;
+        height: 58rem;
+        background-position: right center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+        bottom: -30%;
+        right: calc(50% - 500px);
+        transform: translateX(22%);
+      }
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__button {
+    padding: 3.4rem 0 0;
+
+    @include rwd('large-tablet') {
+      padding: 2.4rem 0 0;
+    }
+  }
+}
